@@ -1,0 +1,22 @@
+.Categories {
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+
+    &_box {
+        border-width: 3px;
+    }
+    &_description {
+        text-align: center;
+    }
+    &_button {
+        justify-content: center;
+        width: 11em;
+        height: 3em;
+        border-radius: 30em;
+        background-color: #800020;
+        color: #ffffff;
+        font-size: 1.3em;
+        margin-bottom: 1em;
+    }
+}

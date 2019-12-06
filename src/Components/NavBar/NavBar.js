@@ -25,11 +25,11 @@ const Navbar = (props) => {
         <FlexContainer>
           <Brand />
           <NavLinks style={linkAnimation}>
-            <a href="/">Women</a>
-            <a href="/">Men</a>
-            <a href="/">Kids</a>
-            <a href="/">Babies</a>
-            <a href="/">Checkout</a>
+            <a href="/women">Women</a>
+            <a href="/men">Men</a>
+            <a href="/kids">Kids</a>
+            <a href="/babies">Babies</a>
+            <a href="/checkout">Checkout</a>
           </NavLinks>
           <BurgerWrapper>
             <BurgerMenu
@@ -55,8 +55,8 @@ const NavBar = styled(animated.nav)`
   top: 0;
   left: 0;
   background: #ffffff;
-  z-index: 1;
-  font-size: 1.4rem;
+  z-index: 0;
+  font-size: 1.5rem;
 `;
 
 const FlexContainer = styled.div`
