@@ -4,7 +4,12 @@ const Banner = () => {
     return (
         <div className="Banner">
             <br />
-            <p className="Banner_text">Buy online and save up to 10%</p>
+            <h2 className="Banner_heading">30% off kids shoes</h2>
+            <br />
+            <p className="Banner_subheading">With any full price adult footwear purchase. Offer applied at checkout. T&Cs apply.</p>
+            <br />
+            <button className="Banner_button">Shop Now</button>
+            <br />
         </div>
     )
 }

@@ -1,10 +1,25 @@
 .Banner {
+    display: inline-flex;
+    flex-direction: row;
     background-color: #800020;
-    height: 10rem;
-    font-size: 1.5em;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
     color: #ffffff;
     z-index: 1;
-    &_text {
-        top: 10em;
-    }
+    width: 100%;
+        &_heading {
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+        &_subheading{
+            font-size: 1.3em;
+            padding: 5em;
+        }
+        &_button{
+            background-color: #ffffff;
+            color: #800020;
+            align-content: center;
+            margin-top: 1em;
+        }
 }

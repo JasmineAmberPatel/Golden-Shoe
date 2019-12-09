@@ -29,7 +29,7 @@ const Navbar = (props) => {
             <a href="/men">Men</a>
             <a href="/kids">Kids</a>
             <a href="/babies">Babies</a>
-            <a href="/checkout">Checkout</a>
+            <a href="/basket">Checkout</a>
           </NavLinks>
           <BurgerWrapper>
             <BurgerMenu

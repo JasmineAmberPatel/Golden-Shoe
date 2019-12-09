@@ -24,8 +24,8 @@ class App extends Component {
           navbarState={this.state.navbarOpen} 
           handleNavbar={this.handleNavbar}
         />
-        <Banner />
         <Hero />
+        <Banner />
         <Categories />
         <GlobalStyle />
       </>
