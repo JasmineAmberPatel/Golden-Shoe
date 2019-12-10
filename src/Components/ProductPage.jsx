@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
 import Products from './Products';
 import Filter from './Filter';
+import Basket from './Basket';
 
 class ProductPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
             products: [],
-            filteredProducts: []
+            filteredProducts: [],
+            cartItems: []
         };
         this.handleChangeSort = this.handleChangeSort.bind(this);
         this.handleChangeSize = this.handleChangeSize.bind(this);
+        this.handleAddToCart = this.handleAddToCart.bind(this);
+        this.handleRemoveFromCart = this.handleRemoveFromCart.bind(this);
     }
     componentWillMount() {
         fetch("http://localhost:8000/products/").then(res => res.json())
@@ -19,6 +23,9 @@ class ProductPage extends Component {
                 filteredProducts: data
 
             }));
+            if (localStorage.getItem('cartItems')){
+                this.setState({cartItems: JSON.parse(localStorage.getItem('cartItems'))})
+            }
     }
     handleChangeSort(e){
         this.setState({sort: e.target.value});
@@ -45,6 +52,30 @@ class ProductPage extends Component {
         return { filteredProducts: this.state.products };
         })
     }
+    handleAddToCart(e, product){
+        this.setState(state => {
+            const cartItems = state.cartItems;
+            let productAlreadyInCart = false;
+            cartItems.forEach(item => {
+                if(item.id === product.id){
+                    productAlreadyInCart = true;
+                    item.count++;
+                }
+            })
+            if(!productAlreadyInCart){
+                cartItems.push({...product, count:1});
+            }
+            localStorage.setItem("cartItems", JSON.stringify(cartItems));
+            return cartItems;
+        })
+    }
+    handleRemoveFromCart(e, item){
+        this.setState(state => {
+           const cartItems = state.cartItems.filter( element => element.id !== item.id);
+                localStorage.setItem('cartItem', cartItems);
+                return {cartItems};
+        });
+        }
 
     render() {
         return (
@@ -60,7 +91,7 @@ class ProductPage extends Component {
                         <Products products={this.state.filteredProducts} handleAddToCart={this.handleAddToCart} />
                     </div>
                     <div className="col-md-4">
-
+                        <Basket cartItems={this.state.cartItems} handleRemoveFromCart={this.handleRemoveFromCart}/>
                     </div>
                 </div>
 
