@@ -7,7 +7,7 @@
         "description": "Ankle-strap fasteening, Peep toe, High block heel",
         "availableSizes": ["3", "4", "5", "6", "7", "8", "9"],
         "brand": "Namba",
-        "price": 45,
+        "price": 45.26,
         "isFreeShipping": false
       },
   
@@ -18,7 +18,7 @@
         "description": "Ankle-strap fastening, Open toe, Block heel, Platform sole",
         "availableSizes": ["3", "4", "5", "6", "7", "8", "9"],
         "brand": "Golden Shoe Company",
-        "price": 30,
+        "price": 30.00,
         "isFreeShipping": false
       },
   
@@ -40,7 +40,7 @@
         "description": "Ankle-strap fastening, Diamante embellishment, Pointed toe, High heel",
         "availableSizes": ["3", "4", "5", "6", "7"],
         "brand": "Missguided",
-        "price": 30,
+        "price": 30.55,
         "isFreeShipping": false
       },
   
@@ -62,7 +62,7 @@
         "description": "Metallic finish, Ankle-strap fastening, Pointed high heel",
         "availableSizes": ["3", "4", "5", "6", "7", "8", "9"],
         "brand": "Missguided",
-        "price": 20,
+        "price": 20.23,
         "isFreeShipping": false
       },
   
@@ -73,7 +73,7 @@
         "description": "Ankle-strap fastening, Open toe, Chunky sole, High embellished heel",
         "availableSizes": ["5", "6", "7", "8", "9"],
         "brand": "Golden Shoe Company",
-        "price": 22.5,
+        "price": 22.00,
         "isFreeShipping": false
       },
   
@@ -94,7 +94,7 @@
         "description": "Slingback style, Pointed toe, Block heel",
         "availableSizes": ["3", "4", "5", "6", "7", "8", "9"],
         "brand": "Bershka",
-        "price": 25.9,
+        "price": 25.99,
         "isFreeShipping": false
       }
     ]

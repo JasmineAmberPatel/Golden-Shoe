@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import Navbar from "./Components/NavBar/NavBar";
-import Hero from "./Components/Hero";
-import Categories from "./Components/Categories";
-import Banner from "./Components/Banner";
-
+import Homepage from "./Components/Homepage";
+import ProductPage from "./Components/ProductPage";
+import { BrowserRouter } from 'react-router-dom';
+import { Switch, Route } from 'react-router';
 import GlobalStyle from './styles/Global';
 import './styles/main.scss'
 
@@ -19,16 +19,17 @@ class App extends Component {
   render() {
 
     return (
-      <>
+      <BrowserRouter>
         <Navbar 
           navbarState={this.state.navbarOpen} 
           handleNavbar={this.handleNavbar}
         />
-        <Hero />
-        <Banner />
-        <Categories />
+        <Switch>
+          <Route exact path="/" component={Homepage} />
+          <Route exact path="/products" component={ProductPage} /> 
+        </Switch>
         <GlobalStyle />
-      </>
+      </BrowserRouter>
     )
   }
 }
