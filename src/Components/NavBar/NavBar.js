@@ -29,7 +29,7 @@ const Navbar = (props) => {
             <a href="/men">Men</a>
             <a href="/kids">Kids</a>
             <a href="/babies">Babies</a>
-            <a href="/basket">Checkout</a>
+            <a href="/basket">Basket</a>
           </NavLinks>
           <BurgerWrapper>
             <BurgerMenu
@@ -50,7 +50,7 @@ const Navbar = (props) => {
 export default Navbar
 
 const NavBar = styled(animated.nav)`
-  position: fixed;
+  position: static;
   width: 100%;
   top: 0;
   left: 0;

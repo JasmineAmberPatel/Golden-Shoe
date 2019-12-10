@@ -3,9 +3,9 @@
       {
         "id": 1,
         "sku": 18644119330491312,
-        "title": "Namba silver flatform ankle strap heeled sandals",
+        "title": "Silver ankle-strap heeled sandals",
         "description": "Ankle-strap fasteening, Peep toe, High block heel",
-        "availableSizes": ["3", "4", "5", "6", "7", "8", "9"],
+        "availableSizes": ["3", "4", "5", "6", "8", "9"],
         "brand": "Namba",
         "price": 45.26,
         "isFreeShipping": false
@@ -16,7 +16,7 @@
         "sku": 11854078013954528,
         "title": "Nutshell platform barely there heeled sandals in green",
         "description": "Ankle-strap fastening, Open toe, Block heel, Platform sole",
-        "availableSizes": ["3", "4", "5", "6", "7", "8", "9"],
+        "availableSizes": ["3", "4", "8", "9"],
         "brand": "Golden Shoe Company",
         "price": 30.00,
         "isFreeShipping": false
@@ -27,7 +27,7 @@
         "sku": 876661122392077,
         "title": "Skinny heeled boots in silver",
         "description": "Side-zip opening, Crocodile effect, Pointed toe, High heel",
-        "availableSizes": ["3", "4", "5", "6", "7", "8", "9"],
+        "availableSizes": ["6", "7", "8", "9"],
         "brand": "Bershka",
         "price": 29.99,
         "isFreeShipping": false
@@ -60,7 +60,7 @@
         "sku": 6090484789343891,
         "title": "Barely there heeled sandals in silver",
         "description": "Metallic finish, Ankle-strap fastening, Pointed high heel",
-        "availableSizes": ["3", "4", "5", "6", "7", "8", "9"],
+        "availableSizes": ["3", "4", "5", "6", "7"],
         "brand": "Missguided",
         "price": 20.23,
         "isFreeShipping": false
@@ -92,7 +92,7 @@
         "sku": 11600983276356165,
         "title": "Samson slingback mid heels in glitter",
         "description": "Slingback style, Pointed toe, Block heel",
-        "availableSizes": ["3", "4", "5", "6", "7", "8", "9"],
+        "availableSizes": ["3", "4", "5", "6", "8", "9"],
         "brand": "Bershka",
         "price": 25.99,
         "isFreeShipping": false
