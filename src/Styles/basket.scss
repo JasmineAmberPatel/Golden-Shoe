@@ -1,0 +1,15 @@
+.btn-xs {
+    color: #272727;
+    display: block;
+    margin: 1em;
+    height: 0;
+    width: 0;
+    background-color: #d6ebf0;
+    border-color: #d6ebf0;
+    &:hover {
+        background-color: #d6ebf0;
+        border-color: #d6ebf0;
+        color: red;
+    }
+}
+

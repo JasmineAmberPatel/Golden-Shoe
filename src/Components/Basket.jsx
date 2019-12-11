@@ -6,14 +6,14 @@ class Basket extends Component {
         const { cartItems } = this.props;
 
         return (
-            <div className="alert alert-info">
+            <div className="alert alert-secondary">
                 {cartItems.length === 0
                     ? "Basket is empty" :
                     <div>You have {cartItems.length} items in the basket. <hr /></div>
                 }
                 {cartItems.length > 0 &&
                     <div>
-                        <ul style={{ marginLeft: -25 }}>
+                        <ul style={{ marginLeft: +10}}>
                             {cartItems.map(item => (
                                 <li key={item.id}>
                                     <b>{item.title}</b>
@@ -27,7 +27,7 @@ class Basket extends Component {
 
                         <b>Sum: {util.formatCurrency(cartItems.reduce((a, c) => (a + c.price * c.count), 0))}
                         </b>
-                        <button onClick={() => alert('Todo: Implement checkout page.')} className="btn btn-primary">checkout</button>
+                        <button onClick={() => alert('Todo: Implement checkout page.')} className="button">checkout</button>
                     </div>
                 }
             </div>

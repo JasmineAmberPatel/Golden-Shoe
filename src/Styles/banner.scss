@@ -1,25 +1,36 @@
 .Banner {
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
     background-color: #800020;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 6rem;
+    height: 7vh;
     color: #ffffff;
     z-index: 1;
     width: 100%;
+    height: 100%;
         &_heading {
             font-size: 2em;
             text-transform: uppercase;
         }
         &_subheading{
             font-size: 1.3em;
-            padding: 5em;
         }
         &_button{
             background-color: #ffffff;
             color: #800020;
-            align-content: center;
+            align-items: center;
             margin-top: 1em;
         }
 }
+
+@media (max-width: 800px) {
+    .Banner {
+        padding-top: 1em;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        height: 20vh;
+        align-items:center;
+    }
+}    

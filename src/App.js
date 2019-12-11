@@ -5,6 +5,7 @@ import ProductPage from "./Components/ProductPage";
 import { BrowserRouter } from 'react-router-dom';
 import { Switch, Route } from 'react-router';
 import GlobalStyle from './styles/Global';
+import Footer from './Components/Footer';
 import './styles/main.scss'
 
 class App extends Component {
@@ -29,6 +30,7 @@ class App extends Component {
           <Route exact path="/products" component={ProductPage} /> 
         </Switch>
         <GlobalStyle />
+        <Footer/>
       </BrowserRouter>
     )
   }

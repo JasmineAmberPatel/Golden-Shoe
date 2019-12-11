@@ -80,7 +80,7 @@ class ProductPage extends Component {
     render() {
         return (
             <div className="container">
-                <h1>Womens Heels</h1>
+                <h1>Womens Party Heels</h1>
                 <hr />
                 <div className="row">
                     <div className="col-md-8">

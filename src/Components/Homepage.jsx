@@ -6,11 +6,10 @@ import Hero from './Hero';
 const Homepage = () => {
     return (
         <Fragment>
-            <Hero />
             <Banner />
+            <Hero />
             <Categories />
         </Fragment>
-
     )
 }
 
