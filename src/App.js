@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import Navbar from "./Components/NavBar/NavBar";
+import Nav from "./Components/Navbar";
 import Homepage from "./Components/Homepage";
 import ProductPage from "./Components/ProductPage";
 import { BrowserRouter } from 'react-router-dom';
 import { Switch, Route } from 'react-router';
-import GlobalStyle from './styles/Global';
 import Footer from './Components/Footer';
 import './styles/main.scss'
 
@@ -21,15 +20,11 @@ class App extends Component {
 
     return (
       <BrowserRouter>
-        <Navbar 
-          navbarState={this.state.navbarOpen} 
-          handleNavbar={this.handleNavbar}
-        />
+        <Nav/>
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route exact path="/products" component={ProductPage} /> 
         </Switch>
-        <GlobalStyle />
         <Footer/>
       </BrowserRouter>
     )

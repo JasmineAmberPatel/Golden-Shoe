@@ -9,7 +9,7 @@ const Hero = () => {
                 <br />
                 <p className="Hero_tagline">Find the perfect shoes to keep your feet warm, dry and looking fly this winter.</p>
                 <br />
-                <button className="button"> Shop Winter</button>
+                <button className="btn btn-dark"> Shop Winter</button>
         </div>
     )
 }

@@ -3,13 +3,37 @@
 @import './banner.scss';
 @import './basket.scss';
 @import './footer.scss';
+@import './navbar.scss';
+@import './products.scss';
+
+*,
+  *::after,
+  *::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit;
+  }
+
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
 
 button {
-        width: 11em;
+        width: 12em;
         height: 3em;
         border-radius: 30em;
         background-color: #800020;
         color: #ffffff;
         font-size: 1.3em;
         margin-bottom: 1em;
+}
+
+h1 {
+        text-transform: uppercase;
+        font-size: 2em;
 }

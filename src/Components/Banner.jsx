@@ -8,7 +8,7 @@ const Banner = () => {
             <br />
             <p className="Banner_subheading">With any full price adult footwear purchase. Offer applied at checkout. T&Cs apply.</p>
             <br />
-            <button className="Banner_button">Shop Now</button>
+            <button className="btn btn-dark white">Shop Now</button>
             <br />
         </div>
     )
