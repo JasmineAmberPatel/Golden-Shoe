@@ -1,1 +1,16 @@
+.container {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
 
+.product-image {
+    transition: transform .2s;
+}
+
+.product-image:hover {
+    transform: scale(1.5);
+}
+
+.product-info {
+    font-size: 1.3em;
+}

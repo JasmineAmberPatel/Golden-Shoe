@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react';
 import Nav from "./Components/Navbar";
 import Homepage from "./Components/Homepage";
 import ProductPage from "./Components/ProductPage";
@@ -7,17 +7,7 @@ import { Switch, Route } from 'react-router';
 import Footer from './Components/Footer';
 import './styles/main.scss'
 
-class App extends Component {
-  state = {
-    navbarOpen: false
-  }
-
-  handleNavbar = () => {
-    this.setState({ navbarOpen: !this.state.navbarOpen });
-  }
-
-  render() {
-
+const App = () => {
     return (
       <BrowserRouter>
         <Nav/>
@@ -29,6 +19,5 @@ class App extends Component {
       </BrowserRouter>
     )
   }
-}
 
 export default App

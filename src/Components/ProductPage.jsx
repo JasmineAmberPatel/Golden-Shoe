@@ -16,7 +16,7 @@ class ProductPage extends Component {
         this.handleAddToCart = this.handleAddToCart.bind(this);
         this.handleRemoveFromCart = this.handleRemoveFromCart.bind(this);
     }
-    componentWillMount() {
+    componentDidMount() {
         fetch("http://localhost:8000/products/").then(res => res.json())
             .then(data => this.setState({
                 products: data,
