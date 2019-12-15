@@ -8,16 +8,16 @@ import Footer from './Components/Footer';
 import './styles/main.scss'
 
 const App = () => {
-    return (
-      <BrowserRouter>
-        <Nav/>
-        <Switch>
-          <Route exact path="/" component={Homepage} />
-          <Route exact path="/products" component={ProductPage} /> 
-        </Switch>
-        <Footer/>
-      </BrowserRouter>
-    )
-  }
+  return (
+    <BrowserRouter>
+      <Nav />
+      <Switch>
+        <Route exact path="/" component={Homepage} />
+        <Route exact path="/products" component={ProductPage} />
+      </Switch>
+      <Footer />
+    </BrowserRouter>
+  )
+}
 
 export default App

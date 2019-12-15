@@ -13,7 +13,7 @@ class Basket extends Component {
                 }
                 {cartItems.length > 0 &&
                     <div>
-                        <ul style={{ marginLeft: +10}}>
+                        <ul style={{ marginLeft: +10 }}>
                             {cartItems.map(item => (
                                 <li key={item.id}>
                                     <b>{item.title}</b>

@@ -23,59 +23,61 @@ class ProductPage extends Component {
                 filteredProducts: data
 
             }));
-            if (localStorage.getItem('cartItems')){
-                this.setState({cartItems: JSON.parse(localStorage.getItem('cartItems'))})
-            }
+        if (localStorage.getItem('cartItems')) {
+            this.setState({ cartItems: JSON.parse(localStorage.getItem('cartItems')) })
+        }
     }
-    handleChangeSort(e){
-        this.setState({sort: e.target.value});
+    handleChangeSort(e) {
+        this.setState({ sort: e.target.value });
         this.listProducts();
     }
-    handleChangeSize(e){
-        this.setState({size: e.target.value});
+    handleChangeSize(e) {
+        this.setState({ size: e.target.value });
         this.listProducts();
     }
     listProducts = () => {
         this.setState(state => {
-          if (state.sort !== '') {
-            state.products.sort((a, b) =>
-              (state.sort === 'lowest'
-                ? ((a.price > b.price) ? 1 : -1)
-                : ((a.price < b.price) ? 1 : -1)));
-          } else {
-            state.products.sort((a, b) => (a.id > b.id) ? 1 : -1);
-          }
-          if(state.size !== '') {
-            return { filteredProducts: state.products.filter(a=>
-                a.availableSizes.indexOf(state.size) >= 0) };
-          }
-        return { filteredProducts: this.state.products };
+            if (state.sort !== '') {
+                state.products.sort((a, b) =>
+                    (state.sort === 'lowest'
+                        ? ((a.price > b.price) ? 1 : -1)
+                        : ((a.price < b.price) ? 1 : -1)));
+            } else {
+                state.products.sort((a, b) => (a.id > b.id) ? 1 : -1);
+            }
+            if (state.size !== '') {
+                return {
+                    filteredProducts: state.products.filter(a =>
+                        a.availableSizes.indexOf(state.size) >= 0)
+                };
+            }
+            return { filteredProducts: this.state.products };
         })
     }
-    handleAddToCart(e, product){
+    handleAddToCart(e, product) {
         this.setState(state => {
             const cartItems = state.cartItems;
             let productAlreadyInCart = false;
             cartItems.forEach(item => {
-                if(item.id === product.id){
+                if (item.id === product.id) {
                     productAlreadyInCart = true;
                     item.count++;
                 }
             })
-            if(!productAlreadyInCart){
-                cartItems.push({...product, count:1});
+            if (!productAlreadyInCart) {
+                cartItems.push({ ...product, count: 1 });
             }
             localStorage.setItem("cartItems", JSON.stringify(cartItems));
             return cartItems;
         })
     }
-    handleRemoveFromCart(e, item){
+    handleRemoveFromCart(e, item) {
         this.setState(state => {
-           const cartItems = state.cartItems.filter( element => element.id !== item.id);
-                localStorage.setItem('cartItem', cartItems);
-                return {cartItems};
+            const cartItems = state.cartItems.filter(element => element.id !== item.id);
+            localStorage.setItem('cartItem', cartItems);
+            return { cartItems };
         });
-        }
+    }
 
     render() {
         return (
@@ -91,7 +93,7 @@ class ProductPage extends Component {
                         <Products products={this.state.filteredProducts} handleAddToCart={this.handleAddToCart} />
                     </div>
                     <div className="col-md-4">
-                        <Basket cartItems={this.state.cartItems} handleRemoveFromCart={this.handleRemoveFromCart}/>
+                        <Basket cartItems={this.state.cartItems} handleRemoveFromCart={this.handleRemoveFromCart} />
                     </div>
                 </div>
 
